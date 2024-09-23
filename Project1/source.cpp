@@ -9,7 +9,6 @@ struct STUDENT_DATA {
     std::string lastName;
 };
 
-
 int main() {
     // Create a vector to hold student data
     std::vector<STUDENT_DATA> students;
@@ -40,10 +39,13 @@ int main() {
     // Close the file
     inputFile.close();
 
-    // this was used for debugging; Print student information for verification (can be removed later)
-    /*for (const auto& student : students) {
+    // Debug mode functionality
+#ifdef _DEBUG
+    std::cout << "Student Information:\n";
+    for (const auto& student : students) {
         std::cout << "First Name: " << student.firstName << ", Last Name: " << student.lastName << std::endl;
-    }*/
+    }
+#endif
 
     return 0; // Successful completion
 }
