@@ -130,7 +130,9 @@
     <ClCompile Include="source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\Downloads\StudentData.txt" />
+    <Text Include="..\..\..\Downloads\StudentData.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </Text>
     <Text Include="..\..\..\Downloads\StudentData_Emails.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
